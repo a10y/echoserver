@@ -14,7 +14,7 @@ import Control.Concurrent
 echoListen :: (Integral a) => a -> IO ()
 echoListen port = do sock <- listenOn $ PortNumber (fromIntegral port :: PortNumber)
                      chosenPort <- NS.socketPort sock
-                     print $ "Listening on port " ++ show chosenPort
+                     putStrLn $ "Listening on port " ++ show chosenPort
                      runServer sock
                   where
                     runServer s = do

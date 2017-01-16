@@ -1,13 +1,13 @@
-name:                webhs
+name:                echoserver
 version:             0.1.0.0
-synopsis:            Initial project template from stack
+synopsis:            Concurrent echo server in Haskell
 description:         Please see README.md
-homepage:            https://github.com/githubuser/webhs#readme
+homepage:            https://github.com/andreweduffy/echoserver#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
+author:              Andrew Duffy
+maintainer:          root@aduffy.io
+copyright:           2017 Andrew Duffy
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
@@ -20,12 +20,12 @@ library
                , bytestring >= 0.10.8.1
   default-language:    Haskell2010
 
-executable webhs-exe
+executable echoserver
   hs-source-dirs:      app
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
-                     , webhs
+                     , echoserver
   default-language:    Haskell2010
 
 test-suite webhs-test
@@ -33,10 +33,10 @@ test-suite webhs-test
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       base
-                     , webhs
+                     , echoserver
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/webhs
+  location: https://github.com/andreweduffy/echoserver
